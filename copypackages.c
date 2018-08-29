@@ -484,7 +484,7 @@ static retvalue by_source(struct package_list *list, struct target *desttarget, 
 
 	assert (d->argc > 0);
 
-	r = package_openiterator(fromtarget, READONLY, &iterator);
+	r = package_openiterator(fromtarget, READONLY, true, &iterator);
 	assert (r != RET_NOTHING);
 	if (!RET_IS_OK(r))
 		return r;
@@ -622,7 +622,7 @@ static retvalue by_formula(struct package_list *list, struct target *desttarget,
 	struct package_cursor iterator;
 	retvalue result, r;
 
-	r = package_openiterator(fromtarget, READONLY, &iterator);
+	r = package_openiterator(fromtarget, READONLY, true, &iterator);
 	assert (r != RET_NOTHING);
 	if (!RET_IS_OK(r))
 		return r;
@@ -651,7 +651,7 @@ static retvalue by_glob(struct package_list *list, struct target *desttarget, st
 	struct package_cursor iterator;
 	retvalue result, r;
 
-	r = package_openiterator(fromtarget, READONLY, &iterator);
+	r = package_openiterator(fromtarget, READONLY, true, &iterator);
 	assert (r != RET_NOTHING);
 	if (!RET_IS_OK(r))
 		return r;
