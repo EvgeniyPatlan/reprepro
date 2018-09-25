@@ -21,3 +21,4 @@ Makefile
 /tests/testpkgs/
 /tests/testrepo/
 /tests/upstreamrepo/
+.DS_Store
